@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHer</title>
+    <style>
+        * {
+            box-sizing: border-box; 
+        }
+        html, body {
+            height: 100%; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #fee8f9; 
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #ffc3ed; 
+            padding: 30px;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky; 
+            top: 0;
+            box-shadow: 0 4px 10px rgba(79, 78, 78, 0.973);
+            font-family: 'Poppins', sans-serif; 
+        }
+        nav a {
+            color: #00d9ff; 
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        nav a:hover {
+            color: #000000; 
+        }
+        nav img {
+            height: 60px;
+            width: auto;
+        }
+        nav a.active {
+        color: #000000; 
+        font-weight: 600;
+        }
+        .borderbox {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            background-color: rgb(34, 97, 255);
+            color: rgb(255, 159, 244);
+            padding: 100px; 
+            flex-wrap: wrap;
+
+        }
+        .bbcontents {
+            z-index: 1;
+            text-align: right;
+            max-width: 50%;
+            padding-left: 20px;
+        }
+        .bbcontents h1 {
+            font-size: 6em;
+            margin: 0; 
+        }
+        @media (max-width: 768px) {
+            .bbcontents h1 {
+                font-size: 3em;
+            }
+        }
+        @media (max-width: 480px) {
+            .bbcontents h1 {
+                font-size: 2.5em;
+            }
+        }
+        .bbimg {
+            position: absolute;
+            z-index: 1;
+            width: 50%;
+            height: 100%;
+            right: 0;
+            overflow: hidden;
+        }
+        .bbimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        h2{
+            font-size: 3em;
+        }
+        h4{
+            font-size:2em;
+        }
+        p{
+            font-size: 1.1em;
+        }
+        .about {
+            margin-top: 20px;
+            background-color: #ffffeb; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); 
+        }
+       
+        .bottom {
+            background-color: rgb(255, 165, 237); 
+            color: #000000;
+            text-align: center;
+            padding: 30px 0px;
+            width: 100%; 
+            margin: 0;
+        }
+        .bottom p {
+            margin: 5px 0;
+        }
+        .subb {
+            font-size: 1em;
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 0);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+        }
+        .buttons {
+            margin: 100px;
+            justify-content: center;
+            gap: 100px;
+            display: flex;
+        }
+    
+        .imageel {
+            position: relative;
+            display: inline-block;
+            width: 350px;
+            height: 250px; 
+            overflow: hidden; 
+            border-radius: 3px; 
+            transition: transform 0.4s;
+        }
+        .imageel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .imageel:hover {
+            transform: scale(1.3);
+        }
+        .imageet {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 171, 251);
+            color: white;
+            text-align: center;
+            padding: 10px 0; 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <img src="https://i.postimg.cc/5tMwTNbh/EDUHER.png" alt="EduHer Logo">
+    <div class="headers">
+        <a href="index.html">Home</a>
+        <a href="About.html"class="active">About STEM</a>
+        <a href="contact.html">Contact us</a>
+    </div>
+</nav>
+
+<div class="borderbox">
+    <div class="bbcontents">
+        <h1>About STEM</h1>
+    </div>
+    <div class="bbimg">
+        <img src="https://plus.unsplash.com/premium_photo-1683865776032-07bf70b0add1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXJzfGVufDB8fDB8fHww" alt="study?">
+    </div>
+</div>
+
+<div class="content">
+    <div class="about">
+        <h2>About Us</h2>
+        <p>We are EduHer, two grade 9 students from Stamford American International School Hong Kong. Our dream is to share the gift of STEM with our peers through making it enjoyable and accessible. As teens ourselves, we understand the issues faced by students and are committed to developing creative content and activities with the ability to spark curiosity and imagination towards science, technology, engineering, and mathematics. Join us for this exciting journey and explore the limitless opportunities offered by STEM with us!</p>
+        
+    </div>
+    <div class="about">
+        <h2>About STEM</h2>
+        <h4>Women In STEM</h4>
+        <p>Women in STEM (Science, Technology, Engineering, and Mathematics) play an important role in shaping the future. Their involvement brings new ideas, solutions, and perspectives that are essential for progress. Here are some key points about women in STEM:</p>
+        <br>
+        <p><strong>More Creativity:</strong> Diverse teams create better solutions. Women offer unique viewpoints that help solve problems differently, leading to more innovative ideas.</p>
+        <p><strong>Inspiring Role Models:</strong> Women in STEM act as role models for young girls. By seeing women succeed in these fields, girls are more likely to believe they can do the same. Programs that connect girls with female mentors can increase interest in STEM careers.</p>
+        <p><strong>Early Education:</strong> Many organizations work to get girls interested in STEM early on. Coding camps, science clubs, and robotics programs encourage girls to develop their skills and confidence.</p>
+        <p><strong>Increasing Representation:</strong> The number of women in STEM jobs is rising, but there is still a gap. More women need to be in leadership positions. Supportive workplaces and policies can help keep women in these fields.</p>
+        <p><strong>Real-World Impact:</strong> Women in STEM make significant contributions, especially in areas like health care and environmental science. They are involved in developing vaccines and finding solutions to climate change.</p>
+        <p><strong>Global Movement:</strong> The push for women in STEM is happening worldwide. Different countries are creating plans to increase female participation in these fields, recognizing the need for gender equality.</p>
+        <p><strong>Inclusive Programs:</strong> It's important to include women from all backgrounds in STEM. Programs that focus on various experiences ensure that every girl has a chance to succeed.</p>
+        <p><strong>Work-Life Balance:</strong> Balancing work and home life can be hard for women in STEM. Companies that offer flexible hours and support for family needs create better environments for women to thrive.</p>
+        <p><strong>Advocacy Matters:</strong> Advocating for women in STEM is key. It helps bring about changes in policies that support equal opportunities and reduce bias in hiring and promotions.</p>
+        <p>In conclusion, women are crucial to the future of STEM. Their creativity and unique perspectives can lead to significant advancements and solutions. By encouraging more girls and women to pursue STEM careers, we can build a more innovative and equitable world.</p>
+            
+        
+        
+    </div>
+    <div class="buttons">
+        <a href="importances.html" class="imageel">
+            <img src="https://www.cielo.co.za/133817-large_default/montreal-square-dining-table-15m.jpg">
+            <div class="imageet">
+                Stem Importances
+            </div>
+        </a>
+        <a href="learn.html" class="imageel">
+            <img src="https://www.cielo.co.za/133817-large_default/montreal-square-dining-table-15m.jpg">
+            <div class="imageet">
+                Learn Stem
+            </div>
+        </a>
+        <a href="files.html" class="imageel">
+            <img src="https://www.cielo.co.za/133817-large_default/montreal-square-dining-table-15m.jpg">
+            <div class="imageet">
+                Free Stem Files
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="bottom">
+    <p>Email: s1108559@stamfordamerican.edu.hk</p>
+    <p>Number: +852 1234 5678</p>
+    <p>Released Date: March 11 of 2025</p>
+    <p>&copy; 2025 EduHer. All rights reserved.</p>
+</div>
+
+</body>
+</html>

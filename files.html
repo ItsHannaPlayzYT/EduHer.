@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHer</title>
+    <style>
+        * {
+            box-sizing: border-box; 
+        }
+        html, body {
+            height: 100%; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #fee8f9; 
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #ffc3ed; 
+            padding: 30px;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky; 
+            top: 0;
+            box-shadow: 0 4px 10px rgba(79, 78, 78, 0.973);
+            font-family: 'Poppins', sans-serif; 
+        }
+        nav a {
+            color: #00d9ff; 
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        nav a:hover {
+            color: #000000; 
+        }
+        nav img {
+            height: 60px;
+            width: auto;
+        }
+        nav a.active {
+            color: #000000; 
+            font-weight: 600;
+        }
+        .borderbox {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            background-color: rgb(34, 97, 255);
+            color: rgb(255, 159, 244);
+            padding: 100px; 
+            flex-wrap: wrap;
+        }
+        .bbcontents {
+            z-index: 1;
+            max-width: 50%;
+            padding-left: 20px;
+        }
+        .bbcontents h1 {
+            font-size: 6em;
+            margin: 0; 
+        }
+        @media (max-width: 768px) {
+            .bbcontents h1 {
+                font-size: 3em;
+            }
+        }
+        @media (max-width: 480px) {
+            .bbcontents h1 {
+                font-size: 2.5em;
+            }
+        }
+        .bbimg {
+            position: absolute;
+            z-index: 1;
+            width: 50%;
+            height: 100%;
+            right: 0;
+            overflow: hidden;
+        }
+        .bbimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        .about {
+            margin-top: 20px;
+            background-color: #ffffeb; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); 
+        }
+        .filebox {
+            background-color: white;
+            padding: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgb(56, 55, 55);
+            margin-top: 5px;
+            text-align: center;
+        }
+        .filebox a {
+            color: #00d9ff; 
+            text-decoration: none;
+            font-size: 1em;
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid #9ff1ffe7;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .filebox a:hover {
+            background-color: #00d9ff; 
+            color: white; 
+        }
+        .bottom {
+            background-color: rgb(255, 165, 237); 
+            color: #000000;
+            text-align: center;
+            padding: 30px 0px;
+            width: 100%; 
+            margin: 0;
+        }
+        .bottom p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <img src="https://i.postimg.cc/5tMwTNbh/EDUHER.png" alt="EduHer Logo">
+    <div class="headers">
+        <a href="index.html">Home</a>
+        <a href="About.html">About STEM</a>
+        <a href="contact.html">Contact us</a>
+    </div>
+</nav>
+
+<div class="borderbox">
+    <div class="bbcontents">
+        <h1>Files</h1>
+    </div>
+    <div class="bbimg">
+        <img src="https://plus.unsplash.com/premium_photo-1683865776032-07bf70b0add1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXJzfGVufDB8fDB8fHww" alt="study?">
+    </div>
+</div>
+
+<div class="content">
+    <div class="about">
+        <h2>Free Files</h2>
+        <p>Download free files about STEM</p>
+        
+        <div class="filebox">
+            <p><a href="https://www.halvorsen.blog/documents/programming/python/resources/Python%20Programming.pdf" target="_blank"download>Python Codes (Credit:https://www.halvorsen.blog/)</a></p>
+        </div>
+        <div class="filebox">
+            <p><a href="https://drive.google.com/file/d/1Xa9h4bm4fDMA2Tj1h2tofM01hehBaNJ6/view?usp=sharing" target="_blank" download>HTML Codes</a></p>
+        </div> 
+        <div class="filebox">
+            <p><a href="https://drive.google.com/file/d/1EhjGy6PVT_7SOZESIeghubgM0GMaehbz/view?usp=sharing" target="_blank"download>Quizes</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="bottom">
+    <p>Email: s1108559@stamfordamerican.edu.hk</p>
+    <p>Number: +852 1234 5678</p>
+    <p>Released Date: March 11 of 2025</p>
+    <p>&copy; 2025 EduHer. All rights reserved.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHer</title>
+    <style>
+        *{
+            box-sizing: border-box; 
+        }
+        html, body{
+            height: 100%; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #fee8f9; 
+            color: #333;
+            line-height: 1.6;
+        }
+        nav{
+            background-color: #ffc3ed; 
+            padding: 30px;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky; 
+            top: 0;
+            box-shadow: 0 4px 10px rgba(79, 78, 78, 0.973);
+            font-family: 'Poppins', sans-serif; 
+        }
+        nav a {
+            color: #00d9ff; 
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        nav a:hover {
+            color: #000000; 
+        }
+        nav img {
+            height: 60px;
+            width: auto;
+        }
+        nav a.active {
+        color: #000000; 
+        font-weight: 600;
+        }
+        .borderbox {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: rgb(34, 97, 255);
+            color: rgb(255, 159, 244);
+            padding: 100px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .bbcontents{
+            z-index: 1;
+            text-align: right;
+            max-width: 50%;
+            padding-left: 20px;
+        }
+        .bbcontents h1 {
+            font-size: 6em;
+            margin: 0; 
+        }
+        @media (max-width: 768px) {
+            .bbcontents h1 {
+                font-size: 3em;
+            }
+        }
+        @media (max-width: 480px) {
+            .bbcontents h1 {
+                font-size: 2.5em;
+            }
+        }
+        .bbimg {
+            position: absolute;
+            z-index: 1;
+            width: 50%;
+            height: 100%;
+            right: 0;
+            overflow: hidden;
+        }
+        .bbimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        h2{
+            font-size: 3em;
+            color: #000;
+        }
+        h4 {
+            font-size: 1.5em;
+            color: #2c0527;
+        }
+        p{
+            font-size: 1.1em;
+            color: #000;
+        }
+        .about {
+            margin-top: 20px;
+            background-color: #ffffeb; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); 
+        }
+        .images{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .images img{
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 5px;
+        margin: 10px 0;
+        }
+        .buttons{
+            margin: 60px;
+            justify-content: center;
+            gap: 70px;
+            display: flex;
+        }
+    
+        .imageel {
+            position: relative;
+            display: inline-block;
+            width: 350px;
+            height: 250px; 
+            overflow: hidden; 
+            border-radius: 3px; 
+            transition: transform 0.4s;
+        }
+        .imageel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .imageel:hover {
+            transform: scale(1.3);
+        }
+        .imageet{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 171, 251);
+            color: white;
+            text-align: center;
+            padding: 10px 0; 
+            font-weight: bold;
+        }
+        .button {
+            background-color: rgb(255, 255, 0);
+            border: none;
+            border-radius: 3px;
+            padding: 4px 8px;
+            cursor: pointer;
+            margin: 10px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .button:hover{
+            transform: scale(1.1);
+        }
+        .buttont {
+            font-size: 15px; 
+            transition: none; 
+            text-decoration: none;
+            color: #000;
+        }
+        .bottom {
+            background-color: rgb(255, 165, 237); 
+            color: #000000;
+            text-align: center;
+            padding: 30px 0px;
+            width: 100%; 
+            margin: 0;
+        }
+        .bottom p{
+            margin: 5px 0;
+        }
+        .subb{
+            font-size: 1em;
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 0);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <img src="https://i.postimg.cc/5tMwTNbh/EDUHER.png" alt="EduHer Logo">
+    <div class="headers">
+        <a href="index.html"class="active">Home</a>
+        <a href="About.html">About STEM</a>
+        <a href="Contact.html">Contact us</a>
+    </div>
+</nav>
+
+<div class="borderbox">
+    <div class="bbcontents">
+        <h1>EDUHER</h1>
+        <div class="button">
+            <a href="about.html" class="buttont">Learn More</a>
+        </div>
+    </div>
+    <div class="bbimg">
+        <img src="https://plus.unsplash.com/premium_photo-1683865776032-07bf70b0add1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXJzfGVufDB8fDB8fHww" alt="study?">
+    </div>
+</div>
+
+<div class="content">
+    <div class="about">
+        <h2>Welcome to EduHer!</h2>
+        <p>Welcome to our beautifully crafted website, where our utmost dedication is to empowering 8-year-old girls and above to boldly venture into the vibrant and ever-changing realm of STEM, an acronym for science, technology, engineering, and mathematics. Through our digital pages, you will find a treasure trove of downloadable resources carefully selected to give you valuable guidance in your studies. Additionally, you will find a range of challenging questions to further enhance your learning process and hone your critical thinking. Moreover, you have the liberty to browse our material without any need for registration or logging in, keeping access as simple and easy as possible. Be part of our endeavor to ignite curiosity and instill rock-hard confidence in science, technology, engineering, and mathematics!</p>
+        <div class="images">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+    </div>
+    
+    <div class="about">
+        <h2>What is STEM?</h2>
+        <p>STEM stands for Science, Technology, Engineering, and Maths. It is a learning style that combines these four subjects so that students are better able to understand the world. Learning through STEM enables students to use their hands and solve everyday issues. Learning with STEM enables students to think critically and creatively and readies them for future careers in healthcare, engineering, and technology. It is designed to make learning fun and applicable to daily life!</p>
+        
+    </div>
+    <div class="about">
+        <h2>How Have Women Faced STEM</h2>
+        <p>Women have faced many challenges in STEM fields. Historically, there were fewer women in these areas because society often believed that boys were better suited for STEM. Even today, women sometimes experience unfair treatment and feel left out in workplaces dominated by men. Many organizations are working to change this by encouraging girls to study STEM, providing support and mentorship, and creating more welcoming environments. While things are getting better, it’s important to keep pushing for equal opportunities so that everyone, regardless of gender, can succeed in STEM.
+        </p>
+    </div>
+    <div class="about">
+        <h2>Women in STEM</h2>
+        <h4>Check out DR. Mae Jemison</h4>
+        <p>Dr. Mae Jemison was the first African American woman in space. She broke down walls and got tons of kids interested in STEM. She studied chemical engineering and medicine, and then she made history on the Space Shuttle Endeavour. After that, she started the Jemison Group, which tries to use space stuff to help society. Dr. Jemison tells young girls to be curious and chase their goals. She always says, “Never be afraid to ask questions.” Her story shows how important it is to be brave and determined if you want to do well in science, tech, engineering, and math.</p>
+        <div class="images">
+            <img src="https://images.newscientist.com/wp-content/uploads/2021/07/16120548/mae_jemison2exd3p7.jpg" alt="DR MAE JEMISON">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="buttons">
+        <a href="importances.html" class="imageel">
+            <img src="https://www.cielo.co.za/133817-large_default/montreal-square-dining-table-15m.jpg">
+            <div class="imageet">
+                Stem Importances
+            </div>
+        </a>
+        <a href="learn.html" class="imageel">
+            <img src="https://www.cielo.co.za/133817-large_default/montreal-square-dining-table-15m.jpg">
+            <div class="imageet">
+                Learn Stem
+            </div>
+        </a>
+        <a href="files.html" class="imageel">
+            <img src="https://www.cielo.co.za/133817-large_default/montreal-square-dining-table-15m.jpg">
+            <div class="imageet">
+                Free Stem Files
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="bottom">
+    <p>Email: s1108559@stamfordamerican.edu.hk</p>
+    <p>Number: +852 1234 5678</p>
+    <p>Released Date: March 11 of 2025</p>
+    <p>&copy; 2025 EduHer. All rights reserved.</p>
+</div>
+</body>
+</html>

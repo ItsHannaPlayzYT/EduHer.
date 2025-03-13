@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <style>
+        * {
+            box-sizing: border-box; 
+        }
+        html, body {
+            height: 100%; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #fee8f9; 
+            color: #000000;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #ffc3ed; 
+            padding: 30px;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky; 
+            top: 0;
+            box-shadow: 0 4px 10px rgba(79, 78, 78, 0.973);
+            font-family: 'Poppins', sans-serif; 
+        }
+        nav a {
+            color: #00d9ff; 
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        nav a:hover {
+            color: #000000; 
+        }
+        nav img {
+            height: 60px;
+            width: auto;
+        }
+        .borderbox {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            background-color: rgb(34, 97, 255);
+            color: rgb(255, 159, 244);
+            padding: 100px; 
+            flex-wrap: wrap;
+        }
+        .bbcontents {
+            z-index: 1;
+            text-align: right;
+            max-width: 50%;
+            padding-left: 20px;
+        }
+        .bbcontents h1 {
+            font-size: 6em;
+            margin: 0; 
+        }
+        @media (max-width: 768px) {
+            .bbcontents h1 {
+                font-size: 3em;
+            }
+        }
+        @media (max-width: 480px) {
+            .bbcontents h1 {
+                font-size: 2.5em;
+            }
+        }
+        .bbimg {
+            position: absolute;
+            z-index: 1;
+            width: 50%;
+            height: 100%;
+            right: 0;
+            overflow: hidden;
+        }
+        .bbimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        .about {
+            margin-top: 20px;
+            background-color: #ffffeb; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); 
+        }
+        .quiz {
+            margin-top: 20px;
+            background-color: #ffffeb; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); 
+            text-align: center;
+        }
+        .quiz a {
+            display: inline-block;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            background-color: rgb(34, 97, 255);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+        .quiz a:hover {
+            background-color: rgb(0, 80, 200);
+        }
+        .bottom {
+            background-color: rgb(255, 165, 237); 
+            color: #000000;
+            text-align: center;
+            padding: 30px 0px;
+            width: 100%; 
+            margin: 0;
+        }
+        .bottom p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <img src="https://i.postimg.cc/5tMwTNbh/EDUHER.png" alt="EduHer Logo">
+    <div class="headers">
+        <a href="index.html">Home</a>
+        <a href="About.html">About STEM</a>
+        <a href="contact.html">Contact us</a>
+    </div>
+</nav>
+
+<div class="borderbox">
+    <div class="bbcontents">
+        <h1>Python</h1>
+    </div>
+    <div class="bbimg">
+        <img src="https://plus.unsplash.com/premium_photo-1683865776032-07bf70b0add1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHl0aG9ufGVufDB8fDB8fHww" alt="Python Image">
+    </div>
+</div>
+
+<div class="content">
+    <div class="about">
+        <h2>All You Need to Know About Python</h2>
+        <p>Python is a high-level, interpreted programming language known for its easy readability and versatility. It is widely used in various domains like web development, data science, artificial intelligence, scientific computing, and more.</p>
+
+        <h2>Basic Syntax</h2>
+        <pre><code>print("Hello, World!")</code></pre>
+        <p>The above line prints "Hello, World!" to the console.</p>
+
+        <h2>Variables and Data Types</h2>
+        <p>Python supports several data types, including:</p>
+        <ul>
+            <li><strong>Integers:</strong> Whole numbers, e.g., <code>age = 30</code></li>
+            <li><strong>Floats:</strong> Decimal numbers, e.g., <code>price = 19.99</code></li>
+            <li><strong>Strings:</strong> Text, e.g., <code>name = "Alice"</code></li>
+            <li><strong>Booleans:</strong> True or False values, e.g., <code>is_student = True</code></li>
+        </ul>
+
+        <h2>Control Structures</h2>
+        <p>Python uses control structures like <strong>if</strong> statements and loops:</p>
+        <pre><code>if age &gt; 18:
+    print("Adult")
+else:
+    print("Minor")</code></pre>
+        
+        <h2>Loops</h2>
+        <p>Loops allow you to execute a block of code multiple times:</p>
+        <pre><code>for i in range(5):
+    print(i)</code></pre>
+        <p>This code prints numbers from 0 to 4.</p>
+
+        <h2>Functions</h2>
+        <p>Functions are reusable blocks of code:</p>
+        <pre><code>def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))</code></pre>
+
+        <h2>Lists</h2>
+        <p>Lists are used to store multiple items in a single variable:</p>
+        <pre><code>fruits = ["apple", "banana", "cherry"]
+print(fruits[0])  # Output: apple</code></pre>
+
+        <h2>Dictionaries</h2>
+        <p>Dictionaries store data in key-value pairs:</p>
+        <pre><code>student = {"name": "Alice", "age": 20}
+print(student["name"])  # Output: Alice</code></pre>
+
+        <h2>Exception Handling</h2>
+        <p>Handle errors gracefully using try-except blocks:</p>
+        <pre><code>try:
+    print(10 / 0)
+except ZeroDivisionError:
+    print("You can't divide by zero!")</code></pre>
+
+        <h2>Object-Oriented Programming (OOP)</h2>
+        <p>Python supports OOP, which allows you to create classes and objects:</p>
+        <pre><code>class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        return f"{self.name} says Woof!"
+
+my_dog = Dog("Buddy")
+print(my_dog.bark())  # Output: Buddy says Woof!</code></pre>
+
+        <h2>Modules</h2>
+        <p>Modules allow you to organize your code into separate files:</p>
+        <pre><code># In my_module.py
+def add(a, b):
+    return a + b
+
+# In your main file
+import my_module
+print(my_module.add(5, 3))  # Output: 8</code></pre>
+
+        <h2>List Comprehensions</h2>
+        <p>A concise way to create lists:</p>
+        <pre><code>squares = [x**2 for x in range(10)]
+print(squares)  # Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre>
+
+        <h2>File Handling</h2>
+        <p>Read from and write to files easily:</p>
+        <pre><code># Writing to a file
+with open("example.txt", "w") as file:
+    file.write("Hello, World!")
+
+# Reading from a file
+with open("example.txt", "r") as file:
+    content = file.read()
+print(content)  # Output: Hello, World!</code></pre>
+    </div>
+
+    <div class="quiz">
+        <h2>Do a Quiz</h2>
+        <a href="pythonquiz.html">Start Quiz</a>
+    </div>
+</div>
+
+<div class="bottom">
+    <p>Email: s1108559@stamfordamerican.edu.hk</p>
+    <p>Number: +852 1234 5678</p>
+    <p>Released Date: March 11 of 2025</p>
+    <p>&copy; 2025 EduHer. All rights reserved.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHer</title>
+    <style>
+        * {
+            box-sizing: border-box; 
+        }
+        html, body {
+            height: 100%; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #fee8f9; 
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #ffc3ed; 
+            padding: 30px;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky; 
+            top: 0;
+            font-family: 'Poppins', sans-serif; 
+        }
+        nav a {
+            color: #00d9ff; 
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        nav a:hover {
+            color: #000000; 
+        }
+        nav img {
+            height: 60px;
+            width: auto;
+        }
+        nav a.active {
+            color: #000000; 
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 3em;
+            text-align: center;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        .contact-form {
+            width: 500px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form textarea {
+            height: 150px; 
+        }
+        .contact-form button {
+            padding: 10px 15px;
+            background-color: #ffc3ed;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            color: #333;
+        }
+        .contact-form button:hover {
+            background-color: #ff9bcf;
+        }
+        .bottom {
+            background-color: rgb(255, 165, 237); 
+            color: #000000;
+            text-align: center;
+            padding: 30px 0px;
+            width: 100%; 
+            margin: 0;
+        }
+        .bottom p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <img src="https://i.postimg.cc/5tMwTNbh/EDUHER.png" alt="EduHer Logo">
+    <div class="headers">
+        <a href="index.html">Home</a>
+        <a href="About.html">About STEM</a>
+        <a href="Contact.html" class="active">Contact us</a>
+    </div>
+</nav>
+
+<h2>Contact Us</h2>
+<div class="contact-form">
+    <form action="https://formspree.io/f/myzegler" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<div class="bottom">
+    <p>Email: s1108559@stamfordamerican.edu.hk</p>
+    <p>Number: +852 1234 5678</p>
+    <p>Released Date: March 11 of 2025</p>
+    <p>&copy; 2025 EduHer. All rights reserved.</p>
+</div>
+
+</body>
+</html>

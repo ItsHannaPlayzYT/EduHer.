@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions - EduHer</title>
+    <style>
+        * {
+            box-sizing: border-box; 
+        }
+        body {
+            background-color: #ffdbf7; 
+            color: #000000;
+            font-family: 'Poppins', sans-serif; 
+            text-align: center;
+            padding: 20px;
+        }
+        .sub {
+            font-size: 1em;
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+            background-color: rgb(246, 255, 120);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+        .option {
+            margin: 10px 0;
+            text-align: left;
+        }
+        .question {
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+        }
+        #score {
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        #returnb {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        #texti {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<button class="sub" id="returnb">Return</button>
+<div class="question">
+    <h3 id="questionn"></h3>
+    <h3 id="question"></h3>
+    <div id="options"></div>
+    <div id="texti">
+        <input type="text" id="useranswer" placeholder="Type your answer here...">
+    </div>
+    <button class="sub" id="checkanswer">Check Answer</button>
+    <p id="feedback"></p>
+    <button class="sub" id="nextquestion" style="display:none;">Next Question</button>
+</div>
+<p id="score">Score: 0 / 20</p>
+
+<script>
+    const questions = [
+        {
+            question: "STEM stands for Science, Technology, Engineering, and Mathematics.",
+            options: ["A) True", "B) False"],
+            answer: 0
+        },
+        {
+            question: "Programming is not considered part of STEM education.",
+            options: ["A) True", "B) False"],
+            answer: 1
+        },
+        {
+            question: "Python is a complex programming language suitable for beginners.",
+            options: ["A) True", "B) False"],
+            answer: 1
+        },
+        {
+            question: "The term 'STEM' was first used in the early 2000s.",
+            options: ["A) True", "B) False"],
+            answer: 0
+        },
+        {
+            question: "STEM education promotes individualism over teamwork.",
+            options: ["A) True", "B) False"],
+            answer: 1
+        },
+        {
+            question: "STEM education helps build _______ thinking skills.",
+            answer: "critical"
+        },
+        {
+            question: "Java is commonly used for creating ______ applications.",
+            answer: "Android"
+        },
+        {
+            question: "HTML is essential for making _______ web pages.",
+            answer: "interactive"
+        },
+        {
+            question: "C++ is known for its ________.",
+            answer: "speed"
+        },
+        {
+            question: "The NSF aims to keep the United States ________ in global competition.",
+            answer: "competitive"
+        },
+        {
+            question: "Which programming language is known for its versatility?",
+            options: ["A) Java", "B) Python", "C) C++"],
+            answer: 1
+        },
+        {
+            question: "What is essential for making interactive web pages?",
+            options: ["A) HTML", "B) JavaScript", "C) Python"],
+            answer: 1
+        },
+        {
+            question: "Which language is often used in data analysis?",
+            options: ["A) C++", "B) Python", "C) JavaScript"],
+            answer: 1
+        },
+        {
+            question: "STEM education is important for:",
+            options: ["A) Understanding modern challenges", "B) Memorizing facts", "C) Avoiding technology"],
+            answer: 0
+        },
+        {
+            question: "Which language is widely used in businesses?",
+            options: ["A) Ruby", "B) Java", "C) Swift"],
+            answer: 1
+        },
+        {
+            question: "Programming improves:",
+            options: ["A) Problem-solving", "B) Stagnation", "C) Isolation"],
+            answer: 0
+        },
+        {
+            question: "The challenges in STEM include lack of:",
+            options: ["A) Resources", "B) Interest", "C) Time"],
+            answer: 0
+        },
+        {
+            question: "Which programming language is known for its speed?",
+            options: ["A) Python", "B) C++", "C) HTML"],
+            answer: 1
+        },
+        {
+            question: "STEM education prepares students for future:",
+            options: ["A) Jobs", "B) Vacations", "C) Hobbies"],
+            answer: 0
+        },
+        {
+            question: "Is programming important for artificial intelligence?",
+            options: ["A) True", "B) False"],
+            answer: 0
+        }
+    ];
+    questions.sort(() => Math.random() - 0.5);
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    document.getElementById('returnb').addEventListener('click', () => {
+        if (confirm("Are you sure you want to return?")) {
+            window.location.href = "learn.html";
+        }
+    });
+
+    document.getElementById('checkanswer').addEventListener('click', () => {
+        const selectedOption = document.querySelector('input[name="option"]:checked');
+        const feedback = document.getElementById('feedback');
+        const userAnswer = document.getElementById('useranswer').value.toLowerCase().trim();
+
+        if (questions[currentQuestionIndex].options) {
+            if (!selectedOption) {
+                feedback.innerHTML = "Please select an answer.";
+                return;
+            }
+
+            const answerIndex = parseInt(selectedOption.value);
+            if (answerIndex === questions[currentQuestionIndex].answer) {
+                score++;
+                feedback.innerHTML = "Correct! Good job!";
+            } else {
+                feedback.innerHTML = `Incorrect. The correct answer is: ${questions[currentQuestionIndex].options[questions[currentQuestionIndex].answer]}`;
+            }
+        } else {
+            if (userAnswer === questions[currentQuestionIndex].answer) {
+                score++;
+                feedback.innerHTML = "Correct! Great job!";
+            } else {
+                feedback.innerHTML = `Incorrect. The correct answer is: ${questions[currentQuestionIndex].answer}`;
+            }
+        }
+
+        document.getElementById('score').innerText = `Score: ${score} / 20`;
+        document.getElementById('nextquestion').style.display = 'inline-block';
+        document.getElementById('checkanswer').style.display = 'none';
+    });
+
+    document.getElementById('nextquestion').addEventListener('click', () => {
+        currentQuestionIndex++;
+        loadQuestion();
+    });
+
+    function loadQuestion() {
+        if (currentQuestionIndex < questions.length) {
+            document.getElementById('questionn').innerText = `Question ${currentQuestionIndex + 1}`;
+            const questionData = questions[currentQuestionIndex];
+            document.getElementById('options').innerHTML = '';
+            document.getElementById('feedback').innerText = '';
+            document.getElementById('nextquestion').style.display = 'none';
+            document.getElementById('useranswer').value = '';
+
+            if (questionData.options) {
+                document.getElementById('question').innerText = questionData.question;
+                questionData.options.forEach((option, index) => {
+                    const optionElement = document.createElement('div');
+                    optionElement.classList.add('option');
+                    optionElement.innerHTML = `
+                        <input type="radio" name="option" value="${index}" id="option${index}">
+                        <label for="option${index}">${option}</label>
+                    `;
+                    document.getElementById('options').appendChild(optionElement);
+                });
+                document.getElementById('texti').style.display = 'none';
+                document.getElementById('checkanswer').style.display = 'inline-block';
+            } else {
+                document.getElementById('question').innerText = questionData.question;
+                document.getElementById('texti').style.display = 'block';
+                document.getElementById('checkanswer').style.display = 'inline-block';
+            }
+        } else {
+            displayCompletionMessage();
+        }
+    }
+
+    function displayCompletionMessage() {
+        document.getElementById('question').innerText = "You've completed the quiz :D";
+        document.getElementById('questionn').innerText = '';
+        document.getElementById('options').innerHTML = '';
+        document.getElementById('texti').style.display = 'none';
+        document.getElementById('checkanswer').style.display = 'none';
+        document.getElementById('nextquestion').style.display = 'none';
+        document.getElementById('score').innerText = `Final Score: ${score} / 20`;
+        document.getElementById('feedback').innerText = '';
+    }
+
+    loadQuestion();
+</script>
+
+</body>
+</html>

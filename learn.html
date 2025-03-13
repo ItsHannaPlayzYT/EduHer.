@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHer</title>
+    <style>
+        * {
+            box-sizing: border-box; 
+        }
+        html, body {
+            height: 100%; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #fee8f9; 
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #ffc3ed; 
+            padding: 30px;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky; 
+            top: 0;
+            box-shadow: 0 4px 10px rgba(79, 78, 78, 0.973);
+            font-family: 'Poppins', sans-serif; 
+        }
+        nav a {
+            color: #00d9ff; 
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        nav a:hover {
+            color: #000000; 
+        }
+        nav img {
+            height: 60px;
+            width: auto;
+        }
+        nav a.active {
+            color: #000000; 
+            font-weight: 600;
+        }
+        .borderbox {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            background-color: rgb(34, 97, 255);
+            color: rgb(255, 159, 244);
+            padding: 100px; 
+            flex-wrap: wrap;
+        }
+        .bbcontents {
+            z-index: 1;
+            text-align: right;
+            max-width: 50%;
+            padding-left: 20px;
+        }
+        .bbcontents h1 {
+            font-size: 6em;
+            margin: 0; 
+        }
+        @media (max-width: 768px) {
+            .bbcontents h1 {
+                font-size: 3em;
+            }
+        }
+        @media (max-width: 480px) {
+            .bbcontents h1 {
+                font-size: 2.5em;
+            }
+        }
+        .bbimg {
+            position: absolute;
+            z-index: 1;
+            width: 50%;
+            height: 100%;
+            right: 0;
+            overflow: hidden;
+        }
+        .bbimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        .about, .quiz {
+            margin-top: 20px;
+            background-color: #ffffeb; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); 
+        }
+        .quiz {
+            text-align: center;
+        }
+        .quiz a {
+            display: inline-block;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            background-color: rgb(34, 97, 255);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+        .quiz a:hover {
+            background-color: rgb(0, 80, 200);
+        }
+        .bottom {
+            background-color: rgb(255, 165, 237); 
+            color: #000000;
+            text-align: center;
+            padding: 30px 0px;
+            width: 100%; 
+            margin: 0;
+        }
+        .bottom p {
+            margin: 5px 0;
+        }
+        .subb {
+            font-size: 1em;
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 0);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <img src="https://i.postimg.cc/5tMwTNbh/EDUHER.png" alt="EduHer Logo">
+    <div class="headers">
+        <a href="index.html">Home</a>
+        <a href="About.html">About STEM</a>
+        <a href="contact.html">Contact us</a>
+    </div>
+</nav>
+
+<div class="borderbox">
+    <div class="bbcontents">
+        <h1>Learning</h1>
+    </div>
+    <div class="bbimg">
+        <img src="https://plus.unsplash.com/premium_photo-1683865776032-07bf70b0add1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXJzfGVufDB8fDB8fHww" alt="study?">
+    </div>
+</div>
+
+<div class="content">
+    <div class="about">
+        <h2>Learn & Write</h2>
+        <p>This page is all about exploring the exciting world of STEM, which stands for Science, Technology, Engineering, and Mathematics. Here, you can read simple information about STEM and try some coding activities. At the end of the page, you’ll find a quiz to test what you have learned!</p>
+        
+        <h2>What is STEM?</h2>
+        <p>STEM means Science, Technology, Engineering, and Mathematics. It is a way of learning that connects school subjects to real-life situations. This helps students think in new ways and solve problems.</p>
+
+        <h2>Programming in STEM</h2>
+        <p>Programming is an important part of STEM education. It is about writing code to create software, websites, and systems that can solve problems or perform tasks. Learning to program helps improve problem-solving skills and creativity.</p>
+        <p>Popular programming languages include:</p>
+        <ul>
+            <li><strong>Python:</strong> A simple and versatile language, great for beginners.</li>
+            <li><strong>Java:</strong> Used a lot in businesses and for Android apps.</li>
+            <li><strong>C++:</strong> Known for its speed, often used in games and software.</li>
+            <li><strong>JavaScript:</strong> Essential for making interactive web pages.</li>
+            <li><strong>HTML:</strong> The basic language for creating web pages.</li>
+        </ul>
+        <p>Programming is also important for data analysis, artificial intelligence, and machine learning, which are necessary skills today.</p>
+
+        <h2>History of STEM</h2>
+        <p>The term "STEM" was first used by the National Science Foundation (NSF) in the early 2000s to focus on these important subjects in education. The NSF saw that a strong STEM education is vital for keeping the United States competitive in the world. Over time, many programs have been created to improve STEM education through partnerships between governments, businesses, and schools.</p>
+
+        <h2>Importance of STEM Education</h2>
+        <p>Learning STEM is important for encouraging new ideas and preparing students for future jobs. It helps build critical thinking, creativity, and teamwork skills. With fast technology changes and complex global challenges, a good STEM education is essential for understanding the modern world.</p>
+
+        <h2>Challenges in STEM Fields</h2>
+        <p>Even though STEM is important, many students face problems in these areas. These include not having enough resources, not getting enough support, and not being exposed to real-world applications. It is important to solve these issues so that every student has a chance to succeed in STEM careers.</p>
+    </div>
+    <div class="quiz">
+        <h2>Quiz</h2>
+        <a href="quiz.html">Start Quiz</a>
+    </div>
+    <div class="quiz">
+        <h2>Learn Python</h2>
+        <a href="python.html">Learn about Python</a>
+    </div>
+</div>
+
+<div class="bottom">
+    <p>Email: s1108559@stamfordamerican.edu.hk</p>
+    <p>Number: +852 1234 5678</p>
+    <p>Released Date: March 11 of 2025</p>
+    <p>&copy; 2025 EduHer. All rights reserved.</p>
+</div>
+
+</body>
+</html>

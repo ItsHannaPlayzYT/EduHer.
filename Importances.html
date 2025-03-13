@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM</title>
+    <style>
+        * {
+            box-sizing: border-box; 
+        }
+        html, body {
+            height: 100%; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #fee8f9; 
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #ffc3ed; 
+            padding: 30px;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky; 
+            top: 0;
+            box-shadow: 0 4px 10px rgba(79, 78, 78, 0.973);
+            font-family: 'Poppins', sans-serif; 
+        }
+        nav a {
+            color: #00d9ff; 
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        nav a:hover {
+            color: #000000; 
+        }
+        nav img {
+            height: 60px;
+            width: auto;
+        }
+        nav a.active {
+            color: #000000; 
+            font-weight: 600;
+        }
+        .borderbox {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: rgb(34, 97, 255);
+            color: rgb(255, 159, 244);
+            padding: 100px;
+            display: flex;
+            align-items: center;
+        }
+        .bbcontents {
+            z-index: 1;
+            text-align: left;
+            max-width: 50%;
+            padding-left: 20px;
+        }
+        .bbcontents h1 {
+            font-size: 6em;
+            margin: 0; 
+        }
+        @media (max-width: 768px) {
+            .bbcontents h1 {
+                font-size: 3em;
+            }
+        }
+        @media (max-width: 480px) {
+            .bbcontents h1 {
+                font-size: 2.5em;
+            }
+        }
+        .bbimg {
+            position: absolute;
+            z-index: 1;
+            width: 50%;
+            height: 100%;
+            right: 0;
+            overflow: hidden;
+        }
+        .bbimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 3em;
+            color: #000;
+        }
+        h4 {
+            font-size: 1.5em;
+            color: #2c0527;
+        }
+        p {
+            font-size: 1.1em;
+            color: #000;
+        }
+        .about {
+            margin-top: 20px;
+            background-color: #ffffeb; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); 
+        }
+        .images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .images img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .buttons {
+            margin: 60px;
+            justify-content: center;
+            gap: 70px;
+            display: flex;
+        }
+        .imageel {
+            position: relative;
+            display: inline-block;
+            width: 350px;
+            height: 250px; 
+            overflow: hidden; 
+            border-radius: 3px; 
+            transition: transform 0.4s;
+        }
+        .imageel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .imageel:hover {
+            transform: scale(1.3);
+        }
+        .imageet {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 171, 251);
+            color: white;
+            text-align: center;
+            padding: 10px 0; 
+            font-weight: bold;
+        }
+        .button {
+            background-color: rgb(255, 255, 0);
+            border: none;
+            border-radius: 3px;
+            padding: 4px 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #000;
+        }
+        .button:hover {
+            transform: scale(1.1);
+        }
+        .bottom {
+            background-color: rgb(255, 165, 237); 
+            color: #000000;
+            text-align: center;
+            padding: 30px 0px;
+            width: 100%; 
+            margin: 0;
+        }
+        .bottom p {
+            margin: 5px 0;
+        }
+        .subb {
+            font-size: 1em;
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 0);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <img src="https://i.postimg.cc/5tMwTNbh/EDUHER.png" alt="EduHer Logo">
+    <div class="headers">
+        <a href="index.html" class="active">Home</a>
+        <a href="About.html">About STEM</a>
+        <a href="Contact.html">Contact us</a>
+    </div>
+</nav>
+
+<div class="borderbox">
+    <div class="bbcontents">
+        <h1>STEM</h1>
+    </div>
+    <div class="bbimg">
+        <img src="https://plus.unsplash.com/premium_photo-1683865776032-07bf70b0add1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXJzfGVufDB8fDB8fHww" alt="study?">
+    </div>
+</div>
+
+<div class="content">
+    <div class="about">
+        <h2>Why STEM Matters</h2>
+        <p>STEM (Science, Technology, Engineering, and Mathematics) is critical in today’s world. It empowers us to understand the complexities of the universe and drives innovation that enhances our daily lives. The importance of STEM extends beyond the classroom; it shapes our economy, influences public policy, and addresses global challenges.</p>
+        <p>One of the primary reasons STEM is vital is its role in problem-solving. As we face issues such as climate change, healthcare disparities, and technological advancements, STEM fields provide the tools and methodologies needed to find effective solutions. For example, engineers design sustainable infrastructure to combat climate change, while scientists develop vaccines to protect public health.</p>
+        <p>Moreover, STEM education fosters critical thinking and creativity, essential for personal and professional growth. It encourages individuals to ask questions, experiment, and explore various solutions. This mindset is vital in a rapidly changing job market where adaptability and innovation are key to success.</p>
+        <p>Furthermore, STEM careers are among the fastest-growing and highest-paying fields. By pursuing education in STEM, individuals open doors to numerous opportunities in diverse industries, from technology and healthcare to agriculture and environmental science. These careers not only provide financial stability but also contribute to societal advancements.</p>
+        <p>In addition, STEM promotes collaboration and communication skills. Many STEM projects require teamwork, bringing together individuals with different expertise to tackle complex problems. This collaborative spirit fosters a sense of community and shared purpose, essential in addressing the multifaceted challenges of today.</p>
+        <p>Ultimately, investing in STEM is investing in our future. It empowers individuals, strengthens economies, and enhances our ability to innovate and solve problems. By understanding and embracing the importance of STEM, we can work towards a more sustainable, equitable, and prosperous world for all.</p>
+        <a href="learn.html" class="button">Learn More About STEM</a>
+    </div>
+</div>
+
+<div class="bottom">
+    <p>Email: s1108559@stamfordamerican.edu.hk</p>
+    <p>Number: +852 1234 5678</p>
+    <p>Released Date: March 11 of 2025</p>
+    <p>&copy; 2025 EduHer. All rights reserved.</p>
+</div>
+
+</body>
+</html>
